@@ -1,0 +1,1 @@
+CALL _build\Psake\psake.cmd .\default.ps1 buildDb -properties "@{'db_mode'='migrate'}"

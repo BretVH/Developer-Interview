@@ -1,0 +1,1 @@
+CALL _build\Psake\psake.cmd .\getStarted.ps1

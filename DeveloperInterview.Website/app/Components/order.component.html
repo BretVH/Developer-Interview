@@ -1,0 +1,41 @@
+﻿<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        All Orders
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <div class="alert alert-info" role="alert" *ngIf="indLoading"> Loading...</div>
+            <div *ngIf='orders && orders.length==0' class="alert alert-info" role="alert">No record found!</div>
+            <table class='table table-striped' *ngIf='orders && orders.length'>
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>OrderId</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Date ordered</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <td>{{order.CustomerId}}</td>
+                        <td>{{order.OrderId}}</td>
+                        <td>{{order.FirstName}}</td>
+                        <td>{{order.LastName}}</td>
+                        <td>{{order.ProductName}}</td>
+                        <td>{{order.Price}}</td>
+                        <td>{{order.Quantity}}</td>
+                        <td>{{order.OrderDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+

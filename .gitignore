@@ -1,0 +1,13 @@
+.vs
+
+bin
+obj
+packages
+
+_build/_output
+_externals
+_publish
+
+!.nuget/*.exe
+!_build/RoundhousE/*.exe
+!_lib/*.dll

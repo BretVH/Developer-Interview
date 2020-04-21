@@ -1,0 +1,75 @@
+﻿@model DeveloperInterview.Website.Models.HomeIndexViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>CRC Developer Interview</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Assignment</h2>
+        <p>
+            As you noted in the <b>README.md</b>, there are two coding assignments that leverage the database that is setup for you when running the GetStarted.bat:
+            <ol>
+                <li><b>CODE-01:</b> Create a page that lists all orders (do NOT use Entity Framework)</li>
+                <li><b>CODE-02:</b> Create a page to add a new order (do NOT use Entity Framework)</li>
+            </ol>
+        </p>
+        <p>
+            This is a pretty wide-open exercise (except for the fact that we do not want you using Entity Framework...other ORMs are OK).  Feel free to get creative.
+            Make it a single page app using Angular or another client side technology.  Use traditional HTTP methods.  Create an API.  Use stored procedures.  Use in-line SQL.
+            The purpose of this exercise is to see what you do with pretty simple requirements!
+
+            Sorry I pushed directly to Master and didn't commit as I was working, I waited until the end.  
+            Would never do that normally.  I was super busy last week and only got to this yesterday, previous weekend was spent in Virginia Beach with my wife to relax over the 3 day weekend.
+            Anyways this is pretty rough but works.
+            
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Evaluation</h2>
+        <p>
+            We really only have 3 requirements:
+            <ul>
+                <li><b><i>GetStarted.bat</i></b> must run successfully on the evaluator's computer</li>
+                <li>No Entity Framework</li>
+                <li>Every commit must be prefaced by the Assignment ID of the current problem you are working on (i.e. CODE-01: Created a new controller because I wanted a new URL for some awesome functionality)</li>
+            </ul>
+        </p>
+        <p>
+            Outside of that, here's a few of our "ideals":
+            <ul>
+                <li>We tend to value frequent, descriptive commits</li>
+                <li>We tend to value creativity</li>
+                <li>We tend to value aesthetics</li>
+                <li>We tend to value good documentation</li>
+                <li>We tend to value good communication</li>
+            </ul>
+        </p>
+        <p>
+            In a real-world scenario, aspects like authentication/authorization, security, error handling, and data validation are of extreme importance.
+            Due to the nature of this assignment, we will choose to ignore and/or severely reduce the importance of these items.  That said, bonus points for solutions that have this stuff included :)
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Database Connectivity</h2>
+        <p>
+            @if (Model.DatabaseSuccess)
+            {
+                <div class="alert alert-success">Database connectivity OK.</div>
+                <div>
+                    It appears like the application can connect to your local DB. Good job, step one is done!
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">Cannot open database.</div>
+                <div>
+                    It appears your local database isn't working correctly.  Make sure you have a local SQL Server instance called SQLExpress and that you've run the GetStarted.bat
+                </div>
+            }
+        </p>
+    </div>
+</div>
